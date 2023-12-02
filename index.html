@@ -1,238 +1,121 @@
 <!DOCTYPE html>
 <html>
-
- <head>
-
-  <title>Pērļu zvejnieks</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <style>
-     body {
-       background-image: url(https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/24/08.jpg);
-     }
-     p,ol,h3,h4,h1,h2,a {
-      background-color: lightgoldenrodyellow;
-     }
-     #RādamaisSaturs{
-       display: none;
-     }
-     </style>
-     <script>
-       function raditsaturu(){
-         document.getElementById("RādamaisSaturs").style.display="block";
-         document.getElementById("PogaRaadiit").style.display= "none";
-         document.getElementById("mainaas").innerHTML= "rawr";
-         document.getElementById("mainaaskrasa"). style.color= "white";
-       }
-       function pasleptsaturu(){
-         document.getElementById("RādamaisSaturs").style.display = "none";
-         document.getElementById("PogaRaadiit").style.display ="block";
-         document.getElementById("mainaas"). innerHTML= "janis poruks ir interesants";
-         document.getElementById("mainaaskrasa").style.color= "orange"
-       }
-     </script>
- </head>
- <body>
-      <div class="container-fluid">  
-           <div class="container text-center">
-               <div class="row">
-                <div class="col">
-                  <img src="https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title" alt="Pērļu zvejnieks graāmata" width="300" height="350">
-                  <button id="PogaRaadiit" onclick="raditsaturu()">Cita</button>
-             <div id="RādamaisSaturs">
-              <img
-              src="https://enciklopedija.lv/api/image/thumbnail?name=42ea67752bc3-30ebad24-9381-47e7-bd2f-32ab149a8352.jpg&size=title"
-              alt="Jānis Poruks" width="300" height="350">
-               <button onclick="pasleptsaturu()">Cita</button>
-             </div>
-                   <h3 class="rounded-5 p-2">Galvenās darbojošās personas tabula</h3>
-                   <table class="table table-dark table-hover">  
-                         <style>
-                            table, th, td {
-                             border: 1px solid black;
-                             border-collapse: collapse;
-                             }
-                         </style>
-                       <tr>
-                            <th>Ansis Vairogs</th>
-                           <th>Zenta</th>
-                           <th>Anna</th>
-                      </tr>
-                       <tr>
-                          <td>Galvenais varonis</td>
-                           <td>Anša pirmā mīlestība</td>
-                           <td>Otrā mīlestība</td>
-                      </tr>
-                  </table>
-                  <a class="https://www.rag.lv/ rounded-5 p-2">Visit raģ.lv</a>
-              </div>
-              <div class="col">
-               </div>
-               <div class="col"> 
-                      <h1 class="rounded-5 p-2">''Pērļu zvejnieks''</h1>
-                      <P id="mainaas">janis poruks ir interesants</P>
-                      <P id="mainaaskrasa">Vēsturiskais konteksts</P>
-                      <button id="mainaas" onclick="raditsaturu()">...</button>
-                     <div id="mainaas">
-                       <p>janis poruks ir interesants</p>
-                       <button onclick="pasleptsaturu()">...</button>
-                     </div>
-                      <h2 class="rounded-5 p-2">Vēsturiskais konteksts</h2>
-                      <p class="rounded-5 p-5">“Pērļu zvejniekā” attēlotie notikumi cieši saistīti ar J. Poruka biogrāfiju, topošā rakstnieka mācībām Rīgā, Rīgas Politehniskā institūta (mūsdienās Rīgas Tehniskā universitāte) priekšskolā (1889–1892) un vēlāk, no 1893. gada februāra līdz 1894. gada aprīlim, Drēzdenes Karaliskajā konservatorijā (Königliches Konservatorium, mūsdienās Kārļa Marijas fon Vēbera Mūzikas augstskola, Hochschule für Musik Carl Maria von Weber Dresden). Autors pievērsies plašai kultūrtelpai, skarot Vidzemi, Rīgu, kā arī centrālā tēla studijas Vācijā. Būtiski literārā darba tapšanā bijuši rakstnieka personiskie iespaidi, vairāku tēlu veidojumā saskatāmas līdzības ar atpazīstamiem prototipiem.</p>
-                      <button id="PogaRaadiit" onclick="raditsaturu()">Rādīt vairāk</button>
-                     <div id="RādamaisSaturs">
-                       <p>Jānis poruks Vācijā mācijās mūziku</p>
-                       <button onclick="pasleptsaturu()">Rādīt mazāk</button>
-                     </div>
-                     <h4 class="rounded-5 p-2">Saraksts</h4>
-                   <ol class="rounded-5 p-5">
-                      <li>Vēsturiskais konteksts</li>
-                      <li>Bilde-''Pērļu zvejnieks'' grāmata</li>
-                      <li>Bilde-Jāņa poruka portrets</li>
-                      <li>RAĢ mājaslapa</li>
-                      <li>Tabula</li>
-                   </ol>
-              </div>
-          </div>
-         </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
- <head>
+  <head>
     <title>Pērļu zvejnieks</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    ></link>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
     <style>
       body {
         background-image: url(https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/24/08.jpg);
+      background-size: cover;
       }
-      p,ol,h3, h4,h1,h2,h6,a {
+      p,
+      ol,
+      h3,
+      h4,
+      h1,
+      h2,
+      a {
         background-color: lightgoldenrodyellow;
       }
-       #RādamaisSaturs {
+      #RādamaisSaturs {
         display: none;
       }
     </style>
     <script>
       function raditsaturu() {
-       document.getElementById("RādamaisSaturs").style.display = "block";
-       document.getElementById("PogaRaadiit").style.display = "none";
-       document.getElementById("mainaas").innerHTML = "Jānis Poruks ir interesants";
-       document.getElementById("mainaaskrasa").style.color = "white";
+        document.getElementById("RādamaisSaturs").style.display = "block";
+        document.getElementById("PogaRaadiit").style.display = "none";
+        
       }
       function pasleptsaturu() {
-       document.getElementById("RādamaisSaturs").style.display = "none";
-       document.getElementById("PogaRaadiit").style.display = "block";
-       document.getElementById("mainaas").innerHTML = "Vēsturiskais konteksts";
-       document.getElementById("mainaaskrasa").style.color = "orange";
+        document.getElementById("RādamaisSaturs").style.display = "none";
+        document.getElementById("PogaRaadiit").style.display = "block";
+        
       }
-   </script>
- </head>
- <body>
-   <div class="container-sm">
-     <div class="container text-center">
-       <div class="row">
-         <div class="col-sm-9">.col-sm-9</div>
-           <img class="img-fluid" src="https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title"
-            alt="Pērļu zvejnieks graāmata" width="300" height="350">
-            <button id="PogaRaadiit" onclick="raditsaturu()">Cita</button>
-             <div id="RādamaisSaturs">
-              <img
-              src="https://enciklopedija.lv/api/image/thumbnail?name=42ea67752bc3-30ebad24-9381-47e7-bd2f-32ab149a8352.jpg&size=title"
-              alt="Jānis Poruks" width="300" height="350">
-               <button onclick="pasleptsaturu()">Cita</button>
-             </div>
-            <h3 class="rounded-5 p-2">Galvenās darbojošās personas tabula</h3>
-           <table class="table table-dark table-hover">
-             <style>
-               table,
-               th,
-               td {
-                 border: 1px solid black;
-                 border-collapse: collapse;
-               }
-             </style>
-             <tr>
-               <th>Ansis Vairogs</th>
-               <th>Zenta</th>
-               <th>Anna</th>
-             </tr>
-             <tr>
-               <td>Galvenais varonis</td>
-               <td>Anša pirmā mīlestība</td>
-               <td>Otrā mīlestība</td>
-             </tr>
-           </table>
-         </div>
-         
-        </div>
-     </div>
-     </div>
-     <div class="container text-center">
-        <div class="row">
-          <div class="col-sm-3">.col-sm-3</div>
-           <h3 class="rounded-5 p-2">Galvenās darbojošās personas tabula</h3>
-           <table class="table table-dark table-hover">
-             <style>
-               table,
-               th,
-               td {
-                 border: 1px solid black;
-                 border-collapse: collapse;
-               }
-             </style>
-             <tr>
-               <th>Ansis Vairogs</th>
-               <th>Zenta</th>
-               <th>Anna</th>
-             </tr>
-             <tr>
-               <td>Galvenais varonis</td>
-               <td>Anša pirmā mīlestība</td>
-               <td>Otrā mīlestība</td>
-             </tr>
-           </table>
-         </div>
-         <div class="col">
-          
-         </div>
-         <div class="col"></div>
-           <h1 class="rounded-5 p-2">"Pērļu zvejnieks</h1>
-           <h2 class="rounded-5 p-2">Vēsturiskais konteksts</h2> 
-           <p class="rounded-5 p-2">“Pērļu zvejniekā” attēlotie notikumi cieši saistīti ar J. Poruka biogrāfiju, topošā
-            rakstnieka mācībām Rīgā, Rīgas Politehniskā institūta (mūsdienās Rīgas Tehniskā universitāte) priekšskolā
-            (1889-1892) un vēlāk, no 1893. gada februāra līdz 1894. gada aprīlim, Drēzdenes Karaliskajā konservatorijā
-            (Königliches Konservatorium, mūsdienās Kārļa Marijas fon Vēbera Mūzikas augstskola, Hochschule für Musik
-            Carl Maria von Weber Dresden). Autors pievērsies plašai kultūrtelpai, skarot Vidzemi, Rīgu, kā arī centrālā
-            tēla studijas Vācijā. Būtiski literārā darba tapšanā bijuši rakstnieka personiskie iespaidi, vairāku tēlu
-            veidojumā saskatāmas līdzības ar atpazīstamiem prototipiem.</p>
-            <button id="PogaRaadiit" onclick="raditsaturu()">Rādīt vairāk</button>
-             <div id="RādamaisSaturs">
-               <p class="rounded-4 p-3">Jānis Poruks Vācijā mācijās mūziku</p>
-               <button onclick="pasleptsaturu()">Rādīt mazāk</button>
-             </div>
-           </div>
-         </div>
-         <div class="col">
-          <a class="https://www.rag.lv/ rounded-5 p-2">Visit raģ.lv</a>
-           <h4 class="rounded-5 p-2">Saraksts</h4>
-           <ol class="rounded-5 p-5">
-             <li>Vēsturiskais konteksts</li>
-             <li>Bilde-''Pērļu zvejnieks'' grāmata</li>
-             <li>Bilde-Jāņa poruka portrets</li>
-             <li>RAĢ mājaslapa</li>
-             <li>Tabula</li>
-           </ol>
-         </div>
-       </div>
-     </div>
-   </div>
-</body>
 
+      function mainaBildes() {
+        var bilde = document.getElementById("bilde1");
+        if (bilde.src.includes("ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg")) {
+          bilde.src = "https://enciklopedija.lv/api/image/thumbnail?name=42ea67752bc3-30ebad24-9381-47e7-bd2f-32ab149a8352.jpg&size=title";
+        } else {
+          bilde.src = "https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title";
+        }
+      }
+      function mainaas() {
+  var mainaisTeksts = document.getElementById("mainasTeksts");
+  if (mainaisTeksts.innerHTML === "Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.") {
+    mainaisTeksts.innerHTML = "Ietekme un nozīme literatūrā un sabiedrībā- “Pērļu zvejnieks” sarakstīts, ievērojot virkni romantisma literārajai tradīcijai būtisku aspektu un īpaši akcentējot reālās dzīves un ideālu pasaules pretstatījumu, kā arī atklājot ikdienai nepiemēroto, trauslo un jūtīgo centrālā tēla personību. J. Poruka idejas sakņojas arī mūzikas un filozofijas studijās, viņu ietekmējuši grieķu filozofa Platona (Πλάτων) uzskati, īpaši Platona darbs “Dzīres” (Συμπόσιον, 385.–370. g. p. m. ē.) un tajā paustā mīlestības filozofija. Saskaņā ar romantisma estētiku “Pērļu zvejniekā” izmantots ceļa motīvs, kas latviešu rakstniecībā pirmo reizi izvērsts tik plaši. Autors atklājas arī kā modernisma rakstniecības priekštecis, pievēršot uzmanību mākslas tēmai un tās refleksijai varoņu psiholoģiskajā portretējumā.";
+  } else {
+    mainaisTeksts.innerHTML = "Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.";
+  }
+}
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <img id="bilde1" src="https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title" alt="Pērļu zvejnieks graāmata" width="300" height="350">
+            <button onclick="mainaBildes()">Mainīt bildi</button>
+            <h3 class="rounded-5 p-2">Galvenās darbojošās personas tabula</h3>
+            
+<table class="table table-dark table-hover">  
+  <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+  </style>
+  <tr>
+    <th>Ansis Vairogs</th>
+    <th>Zenta</th>
+    <th>Anna</th>
+  </tr>
+  <tr>
+    <td>Galvenais varonis</td>
+    <td>Anša pirmā mīlestība</td>
+    <td>Otrā mīlestība</td>
+  </tr>
+</table>
+<a class="https://www.rag.lv/ rounded-5 p-2">Visit raģ.lv</a>
+</div>
+<div class="col">
+</div>
+<div class="col"> 
+<h1 class="rounded-5 p-2">''Pērļu zvejnieks''</h1>
+<h2 class="rounded-5 p-2">Vēsturiskais konteksts</h2>
+<p class="rounded-5 p-5">“Pērļu zvejniekā” attēlotie notikumi cieši saistīti ar J. Poruka biogrāfiju, topošā rakstnieka mācībām Rīgā, Rīgas Politehniskā institūta (mūsdienās Rīgas Tehniskā universitāte) priekšskolā (1889–1892) un vēlāk, no 1893. gada februāra līdz 1894. gada aprīlim, Drēzdenes Karaliskajā konservatorijā (Königliches Konservatorium, mūsdienās Kārļa Marijas fon Vēbera Mūzikas augstskola, Hochschule für Musik Carl Maria von Weber Dresden). Autors pievērsies plašai kultūrtelpai, skarot Vidzemi, Rīgu, kā arī centrālā tēla studijas Vācijā.</p>
+<button id="PogaRaadiit" onclick="raditsaturu()">Rādīt vairāk</button>
+<div id="RādamaisSaturs">
+<p class="rounded-5 p-2">Būtiski literārā darba tapšanā bijuši rakstnieka personiskie iespaidi, vairāku tēlu veidojumā saskatāmas līdzības ar atpazīstamiem prototipiem.</p>
+<button onclick="pasleptsaturu()">Rādīt mazāk</button>
+</div>
+<p class="rounded-5 p-4" id="mainasTeksts">Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.</p>
+          <button onclick="mainaas()">Mainīt tekstu</button>
+<h4 class="rounded-5 p-2">Saraksts</h4>
+<ol class="rounded-5 p-5">
+  <li>Vēsturiskais konteksts</li>
+  <li>Bilde-''Pērļu zvejnieks'' grāmata</li>
+  <li>Bilde-Jāņa poruka portrets</li>
+  <li>Sižeta galvenās līnijas, ietekme un nozīme literatūrā un sabiedrībā</li>
+  <li>Tabula</li>
+  <li>RAĢ mājaslapa</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+</body>
 </html>
