@@ -1,258 +1,163 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title id="galvenaisVirsraksts">Pērļu zvejnieks</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <style>
-      body {
-        background-image: url(https://cdn.pixabay.com/photo/2020/11/15/08/11/boat-5744891_1280.jpg);
-        background-size: cover;
-      }
-      p,ol,h3,h4,h1,h2,a button {
-        background-color: antiquewhite;
-      }
-      #RādamaisSaturs {
-        display: none;
-      }
+        body {
+            background-image: url(https://naudaslietas.lv/wp-content/uploads/2023/07/amir-arabshahi-erskz8orziq-unsplash-scaled.jpg);
+            background-size: cover;
+        }
+
+        H1, ul, h3, .fons {
+            background-color: rgb(255, 255, 255);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
     <script>
-      function raditsaturu() {
-        document.getElementById("RādamaisSaturs").style.display = "block";
-        document.getElementById("PogaRaadiit").style.display = "none";
-      }
-      function pasleptsaturu() {
-        document.getElementById("RādamaisSaturs").style.display = "none";
-        document.getElementById("PogaRaadiit").style.display = "block";
-      }
-      function mainaBildes() {
-        var bilde = document.getElementById("bilde1");
-        if (bilde.src.includes("ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg")) {
-          bilde.src ="https://enciklopedija.lv/api/image/thumbnail?name=42ea67752bc3-30ebad24-9381-47e7-bd2f-32ab149a8352.jpg&size=title";
-        } else {
-          bilde.src ="https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title";
-        }
-      }
-      function mainaas() {
-        var mainasTeksts = document.getElementById("mainasTeksts");
-        if (mainasTeksts.innerHTML ==="Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.") {
-          mainasTeksts.innerHTML ="Ietekme un nozīme literatūrā un sabiedrībā- “Pērļu zvejnieks” sarakstīts, ievērojot virkni romantisma literārajai tradīcijai būtisku aspektu un īpaši akcentējot reālās dzīves un ideālu pasaules pretstatījumu, kā arī atklājot ikdienai nepiemēroto, trauslo un jūtīgo centrālā tēla personību. J. Poruka idejas sakņojas arī mūzikas un filozofijas studijās, viņu ietekmējuši grieķu filozofa Platona (Πλάτων) uzskati, īpaši Platona darbs “Dzīres” (Συμπόσιον, 385.–370. g. p. m. ē.) un tajā paustā mīlestības filozofija. Saskaņā ar romantisma estētiku “Pērļu zvejniekā” izmantots ceļa motīvs, kas latviešu rakstniecībā pirmo reizi izvērsts tik plaši. Autors atklājas arī kā modernisma rakstniecības priekštecis, pievēršot uzmanību mākslas tēmai un tās refleksijai varoņu psiholoģiskajā portretējumā.";
-        } else {
-          mainasTeksts.innerHTML ="Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.";
-        }
-      }
+        document.addEventListener('DOMContentLoaded', function () {
+            const listItems = document.querySelectorAll('ul li a');
+
+            listItems.forEach(item => {
+                item.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
     </script>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container-fluid">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <h1 class="rounded-5 p-2">''Pērļu zvejnieks''</h1>
-            <h2 class="rounded-5 p-2">Vēsturiskais konteksts</h2>
-            <p class="rounded-5 p-5">
-              “Pērļu zvejniekā” attēlotie notikumi cieši saistīti ar J. Poruka
-              biogrāfiju, topošā rakstnieka mācībām Rīgā, Rīgas Politehniskā
-              institūta (mūsdienās Rīgas Tehniskā universitāte) priekšskolā
-              (1889–1892) un vēlāk, no 1893. gada februāra līdz 1894. gada
-              aprīlim, Drēzdenes Karaliskajā konservatorijā (Königliches
-              Konservatorium, mūsdienās Kārļa Marijas fon Vēbera Mūzikas
-              augstskola, Hochschule für Musik Carl Maria von Weber Dresden).
-              Autors pievērsies plašai kultūrtelpai, skarot Vidzemi, Rīgu, kā
-              arī centrālā tēla studijas Vācijā.
-            </p>
-            <button class="rounded-5 p-2" id="PogaRaadiit" onclick="raditsaturu()">Rādīt vairāk</button>
-            <div id="RādamaisSaturs">
-              <p class="rounded-5 p-2">
-                Būtiski literārā darba tapšanā bijuši rakstnieka personiskie
-                iespaidi, vairāku tēlu veidojumā saskatāmas līdzības ar
-                atpazīstamiem prototipiem.
-              </p>
-              <button class="rounded-5 p-2" onclick="pasleptsaturu()">Rādīt mazāk</button>
+        <div class="container ">
+            <div class="row vh-100">
+                <div class="col">
+                    <H1 class="rounded-5 p-2 m-1 text-center">Politiskie režīmi</H1>
+                    <ul class="rounded-5 p-5">
+                        <li><a href="#kas-ir-politiskais-rezims">Kas ir politiskais režīms</a></li>
+                        <li><a href="#rezimi">Režīmi</a></li>
+                        <li>Varas sadalījums</li>
+                     <li><a href="politiska-vara"> Politiskā vara</a></li>
+                     <li>Varas iegūšanas veids</li>
+                      <li>Kādas ir vēlēšanas?(Vēlēšanu sistēma)</li>
+                     <li>Varas institūciju atbildība</li>
+                     <li>Politisko lēmumu pieņemšanas veids</li>
+                     <li>Attiecības starp varu un sabiedrību</li>
+                     <li>Informācijas pieejamība</li>
+                     <li>Vadonības kults</li>
+                     <li>Terors</li>
+                     <li>Sistēmas stiprās un vājās puses</li>
+                     <li>Atsauces</li>
+                    </ul>
+                </div>
+                <div class="col-9 overflow-auto h-100">
+                    <div id="kas-ir-politiskais-rezims" class="rounded-5 p-3 fons m-1">
+                        <h2 class="text-center">Kas ir politiskais režīms?</h2>
+                        <p>Politikā režīms ir valdības forma vai noteikumu kopums, kultūras vai sociālās normas utt., kas regulē valdības vai institūcijas darbību un tās mijiedarbību ar sabiedrību. Trīs plašās režīmu kategorijas, kas parādās lielākajā daļā literatūras, ir demokrātiskais un autoritārais un totalitārais.</p>
+                    </div>
+                    <div class="rounded-5 p-3 fons m-1">
+                      <h2 class="text-center">Režīmi</h3>
+                      <p > Kopā ir 3 režīmi, demokrātiskais, autoritārais un totalitārais. Latvija ir demokrātiska valsts, to garantē Latvijas Satversme. Pirmais pants nosaka, ka Latvija ir demokrātiska republika, 2.pants, ka vara pieder Latvijas tautai. Cilvēktiesību jautājumi aplūkoti Satversmes 8.nodaļā. 
+                         f64_satversme_130612_028.jpg
+                         LR Satversme, Pamatlikums, foto - fotoaģentūra F64 </p>
+                           <p>
+                         Latvijā nav likuma, kas nosaka vispārējus iedzīvotāju pienākumus pret valsti, tiek uzskatīts, ka ikviena cilvēka pienākums ir ievērot likumus. Likumos ir norādīti atsevišķu sociālo un profesionālo grupu, arī amatpersonu pienākumi.
+                         <b>Autoritārisms</b> ir politiskā sistēma, kurai raksturīga varas koncentrācija viena vadoņa rokās. Tai ir raksturīga antidemokrātiska valsts pārvaldes sistēma, kas izveidota, lai nodrošinātu iedzīvotāju bezierunu pakļaušanos vadonim un valsts varai. Vara tiek koncentrēta diktatora rokās, kurš kontrolē visas varas iestādes. Savu varu pār sabiedrību vadonis uztur ar karaspēka, drošības dienestu un paklausīga birokrātiskā aparāta palīdzību.
+                         Dažkārt autoritāras varas pretinieki tiek vajāti vai pat fiziski iznīcināti. Autoritārā valstī var notikt vēlēšanas, tomēr tās nav demokrātiskas. Uz galveno valsts amatu parasti kandidē pats diktators, lai viņa vara izskatītos likumīga. Latvijā autoritārisms bija pēc 1934.gada 15.maija apvērsuma, kad varu savās rokās sagrāba Kārlis Ulmanis ar uzticamām aizsargu vienībām.
+                          
+                         Karlis_Ulmanis.jpg
+                         Kārlis Ulmanis, Latvijas Valsts vadītājs autoritārisma periodā
+                          
+                         Autoritārisms Latvijā pastāvēja līdz Padomju okupācijai 1940.gada jūnijā.
+                         Totalitārisms ir politiskā sistēma, kurā valsti pārvalda bez sabiedrības līdzdalības, lēmumi totalitārismā tiek pieņemti bez saskaņošanas ar sabiedrības vairākumu; nozīmīgākās sociālās, ekonomiskās un politiskās darbības totalitārā režīmā kontrolē valsts. Tas ir diktatūras veids, kurā vara ierobežo cilvēku visās jomās. Diktatūras apstākļos vara pieder nelielam cilvēku lokam vai pat vienam cilvēkam.</p>
+                     </div>
+                     <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="p-2">Varas sadalījums</h4>
+                      <p><b>Demokrātija</b> dalas 3 varās- likumdevējvara, izpildvara un tiesu vara. <hr> <b>Autoritārismā</b> vien centrāla varas struktūra kontrolē lielu daļu varas, vai/iespējams atsevišķos reģionos ir ierobežota vara. <hr><b>Totalitārismā</b> absolūta un visaptveroša varas kontrole, valsts kontrolē visu.</p>
+                     </div>
+                     <div class="rounded-5 p-4 fons m-1">
+                      <h2 class="p-2">Politiskā vara</h2>
+                      <p><b>Demokrātijā</b> tiek piešķirta tautas izvēlei, balsojot par pārstāvjiem vai politikas lēmumiem. Politiskā vara pieder tautai. <hr> <b>Autoritārismā</b> politiskā vara balstās uz vienas personas vai partijas varu, kurai ir plašas pilnvaras lēmumu pieņemšanai. <hr><b>Totalitārismā</b> valsts kontrolē visus politiskos aspektus un regulē</p>
+                     </div>
+                     <div class="rounded-5 p-4 fons m-1">
+                      <h2 class="p-2">Varas iegūšanas veids</h2>
+                      <p><b>Demokrātija</b>- (Vēlēšanu ceļā) Iegūst varu, ievērojot vēlētāju gribu caur brīvām vēlēšanām un politisko konkurenci. <hr> 
+                         <b>Autoritārisms</b>-Varu iegūst caur valsts apvērsumu. Bieži vien varas iegūšana notiek arī caur kontrolētu vēlēšanu procesu. <hr>
+                         <b>Totalitārisms</b>-Varu gūst militārā apvērsumā- izmantojot represijas, manipulāciju un ierobežojot pilsoņu brīvības un tiesības.
+                      </p>
+                     </div>
+                     <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="rounded-5 p-2">Kādas ir vēlēšanas? (Vēlēšanu sitēma)</h2>
+                         <p><b>Demokrātija</b>- vēlēšanas ir brīvas. Tās ir atklātas vēlēšanas, kur pilsoņi balso par savām izvēlētajām partijām vai kandidātiem. Bieži tiek izmantota proporcionālā vēlēšanu sistēma vai vairākuma vēlēšanu sistēma.<hr> 
+                            <b>Autoritārismā</b> ir tikai viena partija. Vēlēšanas ir ierobežotas vai kontrolētas, lai nodrošinātu esošās varas turpināšanos vai dominanci.                           <hr>
+                            <b>Totalitārisms</b>-vēlēšanu nav, jo ir viens vadošais vadonis. Tās var notikt, bet tās ir kā politiska fikcija.
+                         </p>
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="rounded-5 p-2">Varas institūciju atbildība</h2>
+                         <p><b>Demokrātija</b>- Varas iestādes ir atbildīgas iedzīvotājiem un tiek uzraudzītas, lai nodrošinātu demokrātijas principu ievērošanu.<hr> 
+                            <b>Autoritārisms</b>-Varas iestādes nav tik pārredzamas un neatkarīgas, un tās nav tieši atbildīgas iedzīvotājiem. Atbildīgas tiekai vadoņa un institūcijas priekšā.<hr>
+                            <b>Totalitārisms</b>-Varas iestādes ir pilnīgi kontrolētas un nav atbildīgas sabiedrībai, bet gan tikai vadītājam.
+                         </p>
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="rounded-5 p-1">Politisko lēmumu pieņemšanas veids</h2>
+                         <p><b>Demokrātijā</b> notiek caur publisku diskusiju, debates un balsošanu, kur iedzīvotājiem ir iespēja ietekmēt politiskos lēmumus, balsojot par saviem pārstāvjiem vai par konkrētiem jautājumiem.<hr> 
+                            <b>Autoritārisms</b>-Lēmumu pieņem centrālā vara, un iedzīvotājiem var būt ierobežota vai nekāda iespēja piedalīties politiskajā procesā. To sauc par cenzūru.<hr>
+                            <b>Totalitārisms</b>-Notiek centrālajā līmenī, (teikšana tajā ir tikai un vienīgi vadītājam/ diktatoram) pilnīgi neatkarīgi no sabiedrības viedokļa vai vēlmēm.
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="rounded-5 p-2">Attiecības starp varu un sabiedrību</h2>
+                         <p><b>Demokrātijā</b>varas attiecības balstās uz pilsoņu iesaistīšanu un pārredzamību. Varas institūcijas atbild sabiedrībai un cenšas darboties saskaņā ar tās interesēm.<hr> 
+                            <b>Autoritārisms</b>-Varas attiecības ir vairāk centrētas uz autoritāro valdību, kas ir attālināta no sabiedrības vēlmēm un interesēm.<hr>
+                            <b>Totalitārās</b>valdības cenšas kontrolēt un ietekmēt gandrīz visu sabiedrību, atņemot indivīdiem brīvību un personīgo izvēli.
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="rounded-5 p-2">Informācijas pieejamība</h2>
+                         <p><b>Demokrātija</b>-Plaša informācijas pieejamība ir būtiska demokrātijai, lai pilsoņi varētu pieņemt informētus lēmumus un uzraudzīt valdību <hr> 
+                            <b>Autoritārisms</b>-Informācijas pieejamība var būt ierobežota vai kontrolēta ar lielu cenzūru, lai saglabātu esošo varu un vadītu sabiedrību atbilstoši valdības interesēm.<hr>
+                            <b>Totalitārisms</b>-Informācijas kontrole ir stingra un kontrolēta, lai nodrošinātu totalitārā režīma pastāvēšanu, ierobežojot vai filtrējot informāciju atbilstoši valdības vajadzībām.
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="rounded-5 p-2">Vadonības kults</h2>
+                         <p><b>Demokrātija</b>-Vadonības kulta attīstība parasti ir mazāka, jo demokrātiskās sabiedrības vairāk koncentrējas uz kolektīvo lēmumu pieņemšanu. Tādejādi sakot tās nav.<hr> 
+                            <b>Autoritārisma</b>- režīmi var attīstīt vadonības kultu, lai stiprinātu vadītāju autoritāti un varu, izcelot viņu kā valsts simbolu.<hr>
+                            <b>Totalitārisma</b>- režīmi bieži izveido vadonības kultu, kur viens vadītājs vai partija tiek uzskatīta par neapstrīdamu autoritāti un simbolu, kura apkārtējai sabiedrībai ir jāciena un jāpavada.
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class="p-2">Terors</h2>
+                         <p><b>Demokrātija</b>-Pretojas, likumdošana <hr> 
+                            <b>Autoritārisms</b>-Nepastāv<hr>
+                            <b>Totalitārisms</b>-Ideoloģiskais terors, ziņošana par citiem
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class=" p-2">Sistēmu stiprās puses</h2>
+                         <p><b>Demokrātija</b>-iedzīvotāju līdzdalība, paredzemība un atbildība, cilvēktiesību aizsardzība, plašs brīvību spektrs, brīvas vēlēšanas, varas nodalīšana. <hr> 
+                            <b>Autoritārisms</b>-straujāka/ ātrāka lēmumu pieņemšana, stabilitāte un kārtība, ekonomiskā izaugsme.<hr>
+                            <b>Totalitārisms</b>-centralizēta varas kontrole, spēcīga vadības autoritāte, pilnīga politiskā kontrole, augsta mobilizācija.
+                        </div>
+                        <div class="rounded-5 p-4 fons m-1">
+                         <h2 class=" p-2">Sistēmu vājās puses</h2>
+                         <p><b>Demokrātija</b>-lēns lēmumumu pieņemšanas laiks, balsu nevienlīdzības ietekme, mazāks efektivitātes līmenis, birokrātiskais aparāts.<hr> 
+                            <b>Autoritārisms</b>-ierobežota brīvība un iespējas, pilnvaru ļaunprātīga izmantošana, nespēja pielāgoties mainīgajai sabiedrībai vai varai, ierēdņu patvara<hr>
+                            <b>Totalitārisms</b>-sistēmas nestabilitāte, pilnīga brīvības zaudēšana, represijas, brīvības un cilvēktiesību pārkāpumi, sabiedrības neapmierinātība un rezistence, plašs/ liels spiegu loks,ideoloģija tiek uzspiesta jau agrā vecumā, pastav fizisks terors (kas var pat iznīcināt nāciju, tautību, valsti, u.t.t.).
+                        </div>
+                </div>
             </div>
-            <p class="rounded-5 p-4" id="mainasTeksts">
-              Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar
-              centrālā tēla Anša Vairoga personības veidošanās posmiem, kas
-              aptver atšķirīgas norises vietas. Darbība vispirms skar lauku
-              vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā
-              pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē,
-              kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā
-              darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.
-            </p>
-            <button class="rounded-5 p-3" onclick="mainaas()">Mainīt tekstu</button>
-          </div>
-          <div class="col">
-            <img
-              id="bilde1"
-              src="https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title"
-              alt="Pērļu zvejnieks graāmata"
-              width="300"
-              height="350"/>
-            <button class="rounded-5 p-3" onclick="mainaBildes()">Mainīt bildi</button>
-            <h3 class="rounded-5 p-2">Galvenās darbojošās personas tabula</h3>
-            <table class="table table-dark table-hover">
-              <style>
-                table,
-                th,
-                td {
-                  border: 1px solid black;
-                  border-collapse: collapse;
-                }
-              </style>
-              <tr>
-                <th>Ansis Vairogs</th>
-                <th>Zenta</th>
-                <th>Anna</th>
-              </tr>
-              <tr>
-                <td>Galvenais varonis</td>
-                <td>Anša pirmā mīlestība</td>
-                <td>Otrā mīlestība</td>
-              </tr>
-            </table>
-            <a href="https://www.rag.lv/" class="rounded-5 p-2">Visit raģ.lv</a>
-            <h4 class="rounded-5 p-2">Saraksts</h4>
-            <ol class="rounded-5 p-5">
-              <li>Vēsturiskais konteksts</li>
-              <li>Sižeta galvenās līnijas, ietekme un nozīme literatūrā un sabiedrībā</li>
-              <li>Bilde- "Pērļu zvejnieks" grāmata, Bilde- Jāņa Poruka portrets</li>
-              <li>Tabula</li>
-              <li>RAĢ mājaslapa</li>
-            </ol>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-   <title id="galvenaisVirsraksts">Pērļu zvejnieks</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <style>
-     body {
-       background-image: url(https://cdn.pixabay.com/photo/2020/11/15/08/11/boat-5744891_1280.jpg);
-     background-size: cover;
-      }
-     p,ol,h3,h4,h1,h2, a button {
-      background-color: antiquewhite;
-     }
-     #RādamaisSaturs{
-       display: none;
-     }
-     @media screen and (max-width: 600px) {
-  #galvenaisVirsraksts {
-    order: 1;
-  }
-
-  #bilde1 {
-    order: 2;
-  }
-
-  #mainasTeksts {
-    order: 3;
-  }
-
-  table {
-    order: 4;
-  }
-
-  ol {
-    order: 5;
-  }
-
-  #RādamaisSaturs {
-    order: 6;
-  }
-}
-    </style>
-    <script>
-      function raditsaturu() {
-        document.getElementById("RādamaisSaturs").style.display = "block";
-        document.getElementById("PogaRaadiit").style.display = "none";
-      }
-      function pasleptsaturu() {
-        document.getElementById("RādamaisSaturs").style.display = "none";
-        document.getElementById("PogaRaadiit").style.display = "block";
-      }
-      function mainaBildes() {
-        var bilde = document.getElementById("bilde1");
-        if (bilde.src.includes("ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg")) {
-          bilde.src = "https://enciklopedija.lv/api/image/thumbnail?name=42ea67752bc3-30ebad24-9381-47e7-bd2f-32ab149a8352.jpg&size=title";
-        } else {
-          bilde.src = "https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title";
-        }
-      }
-      function mainaas() {
-       var mainasTeksts = document.getElementById("mainasTeksts");
-       if (mainasTeksts.innerHTML === "Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.") {
-       mainasTeksts.innerHTML = "Ietekme un nozīme literatūrā un sabiedrībā- “Pērļu zvejnieks” sarakstīts, ievērojot virkni romantisma literārajai tradīcijai būtisku aspektu un īpaši akcentējot reālās dzīves un ideālu pasaules pretstatījumu, kā arī atklājot ikdienai nepiemēroto, trauslo un jūtīgo centrālā tēla personību. J. Poruka idejas sakņojas arī mūzikas un filozofijas studijās, viņu ietekmējuši grieķu filozofa Platona (Πλάτων) uzskati, īpaši Platona darbs “Dzīres” (Συμπόσιον, 385.–370. g. p. m. ē.) un tajā paustā mīlestības filozofija. Saskaņā ar romantisma estētiku “Pērļu zvejniekā” izmantots ceļa motīvs, kas latviešu rakstniecībā pirmo reizi izvērsts tik plaši. Autors atklājas arī kā modernisma rakstniecības priekštecis, pievēršot uzmanību mākslas tēmai un tās refleksijai varoņu psiholoģiskajā portretējumā.";
-       } else {
-       mainasTeksts.innerHTML = "Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.";
-       }
-      }
-    </script>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="container text-center">
-        <div class="row">
-          <div class="d-flex">
-          <div class="col">
-            <img id="bilde1" src="https://enciklopedija.lv/api/image/thumbnail?name=ede81c1f2e62-75cdf33f-b30d-4bbf-ab48-07c18b777d50.jpg&size=title" alt="Pērļu zvejnieks graāmata" width="300" height="350">
-            <button class="rounded-5 p-3" onclick="mainaBildes()">Mainīt bildi</button>
-            <h3 class="rounded-5 p-2">Galvenās darbojošās personas tabula</h3>
-            <table class="table table-dark table-hover">  
-              <style>
-                table, th, td {
-                border: 1px solid black;
-                border-collapse: collapse;
-                }
-             </style>
-             <tr>
-               <th>Ansis Vairogs</th>
-               <th>Zenta</th>
-               <th>Anna</th>
-             </tr>
-             <tr>
-               <td>Galvenais varonis</td>
-               <td>Anša pirmā mīlestība</td>
-               <td>Otrā mīlestība</td>
-             </tr>
-           </table>
-           <a href="https://www.rag.lv/" class="rounded-5 p-2">Visit raģ.lv</a>
-           <p class="rounded-5 p-4" id="mainasTeksts">Sižeta galvenās līnijas- Darba atsevišķās daļas ir saistītas ar centrālā tēla Anša Vairoga personības veidošanās posmiem, kas aptver atšķirīgas norises vietas. Darbība vispirms skar lauku vidi, tālāk varoņa mācības Rīgā, īslaicīgu atgriešanos dzimtajā pusē, vēl vienu posmu Rīgā, kā arī sekojošās studijas Drēzdenē, kas beidzas ar Vairoga nāvi. Centrālā tēla biogrāfija literārajā darbā atklājas piecos secīgos sižeta posmos un dažādās attiecībās.</p>
-           <button class="rounded-5 p-3" onclick="mainaas()">Mainīt tekstu</button>
-          </div>
-          <div class="col">
-          </div>
-          <div class="col"> 
-           <h1 class="rounded-5 p-2">''Pērļu zvejnieks''</h1>
-           <h2 class="rounded-5 p-2">Vēsturiskais konteksts</h2>
-           <p class="rounded-5 p-5">“Pērļu zvejniekā” attēlotie notikumi cieši saistīti ar J. Poruka biogrāfiju, topošā rakstnieka mācībām Rīgā, Rīgas Politehniskā institūta (mūsdienās Rīgas Tehniskā universitāte) priekšskolā (1889–1892) un vēlāk, no 1893. gada februāra līdz 1894. gada aprīlim, Drēzdenes Karaliskajā konservatorijā (Königliches Konservatorium, mūsdienās Kārļa Marijas fon Vēbera Mūzikas augstskola, Hochschule für Musik Carl Maria von Weber Dresden). Autors pievērsies plašai kultūrtelpai, skarot Vidzemi, Rīgu, kā arī centrālā tēla studijas Vācijā.</p>
-           <button class="rounded-5 p-2" id="PogaRaadiit" onclick="raditsaturu()">Rādīt vairāk</button>
-           <div id="RādamaisSaturs">
-             <p class="rounded-5 p-2">Būtiski literārā darba tapšanā bijuši rakstnieka personiskie iespaidi, vairāku tēlu veidojumā saskatāmas līdzības ar atpazīstamiem prototipiem.</p>
-             <button class="rounded-5 p-2" onclick="pasleptsaturu()">Rādīt mazāk</button>
-           </div>
-           <h4 class="rounded-5 p-2">Saraksts</h4>
-           <ol class="rounded-5 p-5">
-             <li>Vēsturiskais konteksts</li>
-             <li>Bilde-''Pērļu zvejnieks'' grāmata</li>
-             <li>Bilde-Jāņa poruka portrets</li>
-             <li>Sižeta galvenās līnijas, ietekme un nozīme literatūrā un sabiedrībā</li>
-             <li>Tabula</li>
-             <li>RAĢ mājaslapa</li>
-           </ol>
-         </div>
-       </div>
-     </div>
-    </div>
- </body>
+</body>
 </html>
